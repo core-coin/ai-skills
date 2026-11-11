@@ -1,0 +1,43 @@
+# Operating systems
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
+.nfs*
+
+# Editors and local settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local dependencies, caches, and generated outputs
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+coverage/
+.cache/
+
+# Local research and secrets
+.research/
+research-checkouts/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
