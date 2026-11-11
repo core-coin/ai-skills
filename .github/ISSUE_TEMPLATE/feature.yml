@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest a skill or documentation improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What task should an agent be able to complete?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the skill behavior or documentation you want.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting sources
+      description: Link relevant repositories, documentation, or examples.
+    validations:
+      required: true
