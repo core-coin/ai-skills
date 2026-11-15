@@ -21,21 +21,32 @@ def main() -> int:
 	if len(pages) != EXPECTED:
 		errors.append(f"expected {EXPECTED} repository pages, found {len(pages)}")
 	index = (REFS / "index.md").read_text()
+	# A reference card may cover multiple repositories, each with its own revision.
+	revisions = {}
 	for page in pages:
 		rel = page.relative_to(REFS).as_posix()
 		if f"({rel})" not in index:
 			errors.append(f"index does not link {rel}")
 		body = page.read_text()
-		sha = re.search(r"^- Inspected commit: `([a-f0-9]{40})`$", body, re.M)
+		for block in re.split(r"(?=^- Repository: )", body, flags=re.M)[1:]:
+			repo = re.match(r"- Repository: https://github\.com/([^/\s]+/[^/\s]+)\s*$", block, re.M)
+			sha = re.search(r"^- Inspected commit: `([a-f0-9]{40})`$", block, re.M)
+			if "source inspected" in block and not sha:
+				errors.append(f"missing commit in {rel}")
+			if repo and sha:
+				identity, commit = repo.group(1), sha.group(1)
+				if identity in revisions and revisions[identity] != commit:
+					errors.append(f"conflicting inspected commits for {identity}")
+				revisions[identity] = commit
+		if "source inspected" in body and not re.search(r"^- Repository: https://github\.com/", body, re.M):
+			errors.append(f"missing repository identity in {rel}")
+	for page in pages:
+		rel = page.relative_to(REFS).as_posix()
+		body = page.read_text()
 		for url in re.findall(r"https://github\.com/([^/]+)/([^/]+)/blob/([^/]+)/([^\s)]+)", body):
 			owner, repo, commit, _ = url
-			target = REPOS / owner / f"{repo}.md"
-			target_body = target.read_text() if target.exists() else ""
-			target_sha = re.search(r"^- Inspected commit: `([a-f0-9]{40})`$", target_body, re.M)
-			if not target_sha or commit != target_sha.group(1):
+			if revisions.get(f"{owner}/{repo}") != commit:
 				errors.append(f"source evidence mismatch in {rel}")
-		if "source inspected" in body and not sha:
-			errors.append(f"missing commit in {rel}")
 	for page in [ROOT / "README.md", SKILL / "SKILL.md", *REFS.rglob("*.md")]:
 		body = page.read_text()
 		for dest in re.findall(r"\]\(([^)#]+)(?:#[^)]*)?\)", body):

@@ -34,5 +34,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When integrating these shared types and hash utilities with Core, compare [address widths](../../core-protocol.md#addresses-and-ican) and [hashing rules](../../core-protocol.md#hashing); upstream-style crate names do not establish compatible semantics.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/core-common/blob/6887ba42dc17baaa96bd75b1e88d9c6db0789abe/README.md), [`rlp/src/lib.rs`](https://github.com/core-coin/core-common/blob/6887ba42dc17baaa96bd75b1e88d9c6db0789abe/rlp/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/core-common/blob/6887ba42dc17baaa96bd75b1e88d9c6db0789abe/Cargo.toml), [`.github/workflows/ci.yml`](https://github.com/core-coin/core-common/blob/6887ba42dc17baaa96bd75b1e88d9c6db0789abe/.github/workflows/ci.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

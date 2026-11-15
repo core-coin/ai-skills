@@ -34,5 +34,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core network integration, read the [Cryptore seal-hash and proof-of-work rules](../../core-protocol.md#consensus); verify the algorithm and parameters used by the target client and binding.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/RandomY/blob/c9d185a055b7604e8d58059031e0e33dfe577cc5/README.md), [`src/cpu.cpp`](https://github.com/core-coin/RandomY/blob/c9d185a055b7604e8d58059031e0e33dfe577cc5/src/cpu.cpp), [`CMakeLists.txt`](https://github.com/core-coin/RandomY/blob/c9d185a055b7604e8d58059031e0e33dfe577cc5/CMakeLists.txt), [`.github/workflows/pipeline.yml`](https://github.com/core-coin/RandomY/blob/c9d185a055b7604e8d58059031e0e33dfe577cc5/.github/workflows/pipeline.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

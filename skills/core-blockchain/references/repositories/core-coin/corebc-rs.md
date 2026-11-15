@@ -34,5 +34,9 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For mnemonic or hardware-wallet signing, read [Core HD derivation](../../core-protocol.md#hd-wallet-derivation) and verify the relevant signer backend's supported derivation scheme, full path, and account index.
+
+For Core account and contract integration, consult the relevant [Core protocol](../../core-protocol.md) sections, including [hashing](../../core-protocol.md#hashing), [message and typed-data signing](../../core-protocol.md#message-and-typed-data-signing), and [transaction encoding](../../core-protocol.md#transactions), then verify the relevant crate's implementation.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/corebc-rs/blob/4395f3758517c1e40fbcd4fbe5b0359416180f14/README.md), [`corebc/src/lib.rs`](https://github.com/core-coin/corebc-rs/blob/4395f3758517c1e40fbcd4fbe5b0359416180f14/corebc/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/corebc-rs/blob/4395f3758517c1e40fbcd4fbe5b0359416180f14/Cargo.toml), [`.github/workflows/book.yml`](https://github.com/core-coin/corebc-rs/blob/4395f3758517c1e40fbcd4fbe5b0359416180f14/.github/workflows/book.yml), [`.github/workflows/ci.yml`](https://github.com/core-coin/corebc-rs/blob/4395f3758517c1e40fbcd4fbe5b0359416180f14/.github/workflows/ci.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

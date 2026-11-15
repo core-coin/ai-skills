@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When using this cryptographic library from a Core client or wallet, consult the [Core signature format](../../core-protocol.md#signatures-and-address-derivation); the protocol wrapper and raw Ed448 primitive have different representations.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/libgoldilocks/blob/f9177d5efcade6254711d20262805e000896a0e7/README.md), [`src/eddsa.c`](https://github.com/core-coin/libgoldilocks/blob/f9177d5efcade6254711d20262805e000896a0e7/src/eddsa.c), [`.github/workflows/build.yml`](https://github.com/core-coin/libgoldilocks/blob/f9177d5efcade6254711d20262805e000896a0e7/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

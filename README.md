@@ -8,7 +8,7 @@ Reusable coding-agent guidance for the Core Blockchain ecosystem.
 | --- | --- |
 | [core-blockchain](skills/core-blockchain/SKILL.md) | Core protocol, clients, mining, CVM contracts, cryptography, SDKs, wallets, APIs, and operations. |
 
-The skill routes agents to [88 repository references](skills/core-blockchain/references/index.md) and cross-cutting compatibility notes. Each reference records its inspected source revision and what was actually validated. Research notes do not assert that every project is maintained or production ready.
+The skill routes agents to [88 reference cards covering 89 repositories](skills/core-blockchain/references/index.md), [Core protocol guidance](skills/core-blockchain/references/core-protocol.md), and [compatibility planning notes](skills/core-blockchain/references/protocol-and-compatibility.md). Each reference records its inspected source revision and what was actually validated. Research notes do not assert that every project is maintained or production ready.
 
 ## Install
 

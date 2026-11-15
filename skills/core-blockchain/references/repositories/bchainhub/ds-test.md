@@ -32,5 +32,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core-specific contract assertions, use [Core protocol](../../core-protocol.md) to establish expected address and execution behavior.
+
 Primary evidence: [`src/test.sol`](https://github.com/bchainhub/ds-test/blob/728395453b4e19d01bb83005b191e0dfc28a7d94/src/test.sol), [`Makefile`](https://github.com/bchainhub/ds-test/blob/728395453b4e19d01bb83005b191e0dfc28a7d94/Makefile), [`package.json`](https://github.com/bchainhub/ds-test/blob/728395453b4e19d01bb83005b191e0dfc28a7d94/package.json), [`.github/workflows/build.yml`](https://github.com/bchainhub/ds-test/blob/728395453b4e19d01bb83005b191e0dfc28a7d94/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

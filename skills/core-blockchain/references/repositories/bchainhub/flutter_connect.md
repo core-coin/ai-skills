@@ -39,5 +39,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core wallet addresses and signing integration, consult [ICAN rules](../../core-protocol.md#addresses-and-ican) and the [Core signature format](../../core-protocol.md#signatures-and-address-derivation).
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/flutter_connect/blob/9579fe3a8236fadf6570888c2c98ee995426bd36/README.md), [`lib/src/links.dart`](https://github.com/bchainhub/flutter_connect/blob/9579fe3a8236fadf6570888c2c98ee995426bd36/lib/src/links.dart), [`pubspec.yaml`](https://github.com/bchainhub/flutter_connect/blob/9579fe3a8236fadf6570888c2c98ee995426bd36/pubspec.yaml), [`.github/workflows/ci.yml`](https://github.com/bchainhub/flutter_connect/blob/9579fe3a8236fadf6570888c2c98ee995426bd36/.github/workflows/ci.yml), [`.github/workflows/release.yml`](https://github.com/bchainhub/flutter_connect/blob/9579fe3a8236fadf6570888c2c98ee995426bd36/.github/workflows/release.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

@@ -37,5 +37,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For execution compatibility, compare this Rust VM with the [go-core CVM baseline](../../core-protocol.md#cvm-execution) and [precompile behavior](../../core-protocol.md#precompile-addresses); verify equivalence in this implementation rather than assuming it.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/cvm/blob/cf0f8737c7139720e390d83ce940b846cc78dd1b/README.md), [`bins/revme/src/lib.rs`](https://github.com/core-coin/cvm/blob/cf0f8737c7139720e390d83ce940b846cc78dd1b/bins/revme/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/cvm/blob/cf0f8737c7139720e390d83ce940b846cc78dd1b/Cargo.toml), [`.github/workflows/ci.yml`](https://github.com/core-coin/cvm/blob/cf0f8737c7139720e390d83ce940b846cc78dd1b/.github/workflows/ci.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

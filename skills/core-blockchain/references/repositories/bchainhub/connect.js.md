@@ -38,5 +38,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When changing Core wallet-address validation, consult the [ICAN baseline](../../core-protocol.md#addresses-and-ican) and confirm which rules belong at the browser integration boundary.
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/connect.js/blob/e4cd8930b2babf283463054b3932036495d20504/README.md), [`src/index.ts`](https://github.com/bchainhub/connect.js/blob/e4cd8930b2babf283463054b3932036495d20504/src/index.ts), [`package.json`](https://github.com/bchainhub/connect.js/blob/e4cd8930b2babf283463054b3932036495d20504/package.json), [`.github/workflows/ci.yml`](https://github.com/bchainhub/connect.js/blob/e4cd8930b2babf283463054b3932036495d20504/.github/workflows/ci.yml), [`.github/workflows/release.yml`](https://github.com/bchainhub/connect.js/blob/e4cd8930b2babf283463054b3932036495d20504/.github/workflows/release.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

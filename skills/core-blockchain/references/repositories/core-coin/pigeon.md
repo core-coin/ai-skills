@@ -34,5 +34,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core signing interoperability, compare the produced signature with the [Core signature format](../../core-protocol.md#signatures-and-address-derivation) and verify the [transaction signing hash, wire encoding, and network ID](../../core-protocol.md#transactions).
+
 Primary evidence: [`README.md`](https://github.com/core-coin/pigeon/blob/ee0250ca8c9e995e4f3c7b55116977adc7ee8999/README.md), [`main.go`](https://github.com/core-coin/pigeon/blob/ee0250ca8c9e995e4f3c7b55116977adc7ee8999/main.go), [`go.mod`](https://github.com/core-coin/pigeon/blob/ee0250ca8c9e995e4f3c7b55116977adc7ee8999/go.mod), [`.github/workflows/build.yml`](https://github.com/core-coin/pigeon/blob/ee0250ca8c9e995e4f3c7b55116977adc7ee8999/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

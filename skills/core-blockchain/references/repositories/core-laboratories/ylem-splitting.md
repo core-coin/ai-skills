@@ -24,4 +24,6 @@ The source contains a `DistributeWithFee` contract for splitting native currency
 
 ## Relationships and validation
 
+For address handling and CVM expectations in this contract and its tests, consult [Core protocol](../../core-protocol.md).
+
 See [`ylem`](../core-coin/ylem.md), [`foxar`](../bchainhub/foxar.md), and [`spark-std`](../bchainhub/spark-std.md) for related tasks. The submodule declarations are direct repository relationships; the other links are task routing. Dependencies were not installed, and build, tests, and runtime were not executed during this pass.

@@ -36,5 +36,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When integrating these primitives with Core, distinguish the raw Ed448 result from the [Core extended signature format](../../core-protocol.md#signatures-and-address-derivation).
+
 Primary evidence: [`README.md`](https://github.com/core-coin/go-goldilocks/blob/c399187e68d118fa77495c09bfbea3d75449f598/README.md), [`goldilocks.go`](https://github.com/core-coin/go-goldilocks/blob/c399187e68d118fa77495c09bfbea3d75449f598/goldilocks.go), [`go.mod`](https://github.com/core-coin/go-goldilocks/blob/c399187e68d118fa77495c09bfbea3d75449f598/go.mod), [`.github/workflows/build.yml`](https://github.com/core-coin/go-goldilocks/blob/c399187e68d118fa77495c09bfbea3d75449f598/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

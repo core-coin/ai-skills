@@ -36,5 +36,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Before adapting example contracts and tests, check the [CVM execution baseline](../../core-protocol.md#cvm-execution) and [precompile addresses](../../core-protocol.md#precompile-addresses).
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/spark-template/blob/4c4ba9c74044a76255c3e950605ee294d1b7f581/README.md), [`src/Contract.sol`](https://github.com/bchainhub/spark-template/blob/4c4ba9c74044a76255c3e950605ee294d1b7f581/src/Contract.sol), [`.gitmodules`](https://github.com/bchainhub/spark-template/blob/4c4ba9c74044a76255c3e950605ee294d1b7f581/.gitmodules).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

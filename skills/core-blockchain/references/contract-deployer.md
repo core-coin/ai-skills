@@ -6,6 +6,8 @@ The user supplied a Contract Deployer README without a repository URL, branch, o
 
 The described tool is a local TypeScript web GUI for compiling, deploying, and interacting with contracts on Core and several EVM chains. Core Devin is the default network; mainnets are opt-in. Use this guide for tasks involving its local GUI, compiler or artifact paths, fee review, signing, contract interactions, token transfers, or Core Safe integration. It is separate from the [`ylem`](repositories/core-coin/ylem.md) compiler and [`foxar`](repositories/bchainhub/foxar.md) framework.
 
+For Core compilation, signing, address handling, and contract calls, consult [Core protocol](core-protocol.md). Apply those rules to the Core path; check the selected chain separately for the EVM paths.
+
 ## Reported workflow and boundaries
 
 - The README documents `npm install`, `npm run ylem:install`, and `npm start` from the project root. It says the Ylem install checks a SHA-256 digest and the server binds `127.0.0.1:4848`. These commands were **not executed** in this workspace.

@@ -36,5 +36,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Before changing work validation or reward accounting, read the [implemented Core consensus and reward rules](../../core-protocol.md#consensus). For payout serialization and signing, use the [Core transaction rules](../../core-protocol.md#transactions).
+
 Primary evidence: [`README.md`](https://github.com/catchthatrabbit/pool/blob/2fe84056362bd65fdff341b776984db79be3a479/README.md), [`main.go`](https://github.com/catchthatrabbit/pool/blob/2fe84056362bd65fdff341b776984db79be3a479/main.go), [`.github/workflows/build.yml`](https://github.com/catchthatrabbit/pool/blob/2fe84056362bd65fdff341b776984db79be3a479/.github/workflows/build.yml), [`.github/workflows/deploy_brts_public.yaml`](https://github.com/catchthatrabbit/pool/blob/2fe84056362bd65fdff341b776984db79be3a479/.github/workflows/deploy_brts_public.yaml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

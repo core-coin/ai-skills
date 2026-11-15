@@ -39,5 +39,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When changing Core wallet-address validation, consult the [ICAN baseline](../../core-protocol.md#addresses-and-ican) and confirm which rules belong at the authentication boundary.
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/better-connect/blob/eea920ea38513181527fc5dca0c7a706d8318fea/README.md), [`src/index.ts`](https://github.com/bchainhub/better-connect/blob/eea920ea38513181527fc5dca0c7a706d8318fea/src/index.ts), [`package.json`](https://github.com/bchainhub/better-connect/blob/eea920ea38513181527fc5dca0c7a706d8318fea/package.json), [`.github/workflows/ci.yml`](https://github.com/bchainhub/better-connect/blob/eea920ea38513181527fc5dca0c7a706d8318fea/.github/workflows/ci.yml), [`.github/workflows/interop.yml`](https://github.com/bchainhub/better-connect/blob/eea920ea38513181527fc5dca0c7a706d8318fea/.github/workflows/interop.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

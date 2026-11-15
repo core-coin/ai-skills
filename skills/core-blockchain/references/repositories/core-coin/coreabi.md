@@ -32,5 +32,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core ABI address encoding, selectors, and event IDs, consult [ICAN address widths](../../core-protocol.md#addresses-and-ican) and [Core hashing](../../core-protocol.md#hashing).
+
 Primary evidence: [`README.md`](https://github.com/core-coin/coreabi/blob/ff9eab39a6a6e407a550e8c49b28ceb415aafcf2/README.md), [`cli/src/main.rs`](https://github.com/core-coin/coreabi/blob/ff9eab39a6a6e407a550e8c49b28ceb415aafcf2/cli/src/main.rs), [`Cargo.toml`](https://github.com/core-coin/coreabi/blob/ff9eab39a6a6e407a550e8c49b28ceb415aafcf2/Cargo.toml), [`.github/workflows/main.yml`](https://github.com/core-coin/coreabi/blob/ff9eab39a6a6e407a550e8c49b28ceb415aafcf2/.github/workflows/main.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When changing Core contract test helpers or recovery assertions, consult the [CVM baseline](../../core-protocol.md#cvm-execution) and [ecrecover failure behavior](../../core-protocol.md#ecrecover). Construct signing test digests using the [message and typed-data rules](../../core-protocol.md#message-and-typed-data-signing).
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/README.md), [`src/Vm.sol`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/src/Vm.sol), [`.gitmodules`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/.gitmodules), [`package.json`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/package.json), [`.github/workflows/ci.yml`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/.github/workflows/ci.yml), [`.github/workflows/sync.yml`](https://github.com/bchainhub/spark-std/blob/e3212df3fe6568c2f24981d042ba83843410c069/.github/workflows/sync.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

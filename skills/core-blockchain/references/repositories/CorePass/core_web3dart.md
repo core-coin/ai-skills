@@ -36,5 +36,9 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When integrating keys from an HD wallet, use [Core HD derivation](../../core-protocol.md#hd-wallet-derivation) to preserve the originating wallet's path and account selection. Verify which component performs derivation before treating SDK key import as mnemonic recovery.
+
+For Dart signing and contract integration, consult [ICAN rules](../../core-protocol.md#addresses-and-ican), the [Core signature format](../../core-protocol.md#signatures-and-address-derivation), [message and typed-data digests](../../core-protocol.md#message-and-typed-data-signing), and [transaction encoding](../../core-protocol.md#transactions).
+
 Primary evidence: [`README.md`](https://github.com/CorePass/core_web3dart/blob/e472746ff899d92507ecbfbfc357978f7d87296a/README.md), [`lib/cip.dart`](https://github.com/CorePass/core_web3dart/blob/e472746ff899d92507ecbfbfc357978f7d87296a/lib/cip.dart), [`pubspec.yaml`](https://github.com/CorePass/core_web3dart/blob/e472746ff899d92507ecbfbfc357978f7d87296a/pubspec.yaml), [`.github/workflows/publish.yml`](https://github.com/CorePass/core_web3dart/blob/e472746ff899d92507ecbfbfc357978f7d87296a/.github/workflows/publish.yml), [`.github/workflows/test.yml`](https://github.com/CorePass/core_web3dart/blob/e472746ff899d92507ecbfbfc357978f7d87296a/.github/workflows/test.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.
