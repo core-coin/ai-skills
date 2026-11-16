@@ -9,6 +9,8 @@ Identify the task, ecosystem layer, and relevant repositories. Start with the [r
 
 Read the relevant sections of [Core protocol](references/core-protocol.md) before work on Core addresses, HD wallet derivation, hashing, signatures and typed data, transaction encoding, CVM bytecode, precompile calls, consensus, or Core/Ethereum compatibility.
 
+For mnemonic creation, validation, or recovery, consult [mnemonic dictionaries](references/mnemonic-dictionaries.md) for language-specific wordlist sources and ordering before selecting a dictionary. Also check the target wallet's supported languages and derivation behavior.
+
 For contract development, use [Ylem](references/repositories/core-coin/ylem.md) for compiler and ABI assumptions, [CoreOZ](references/repositories/bchainhub/CoreOpenZeppelin.md) for standard and upgradeable contract libraries, and [Foxar](references/repositories/bchainhub/foxar.md) for project workflows.
 
 Read the target repository's current source, README, manifests, CI, and tests before changing code. Verify toolchain versions, interfaces, and dependencies against that checkout. Recheck cited code when its commit differs from the reference. Prefer authoritative repository evidence over assumptions from names or upstream projects.

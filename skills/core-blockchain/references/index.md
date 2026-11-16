@@ -7,7 +7,7 @@ Coverage: **88 reference cards covering 89 repository identities**: 86 inspected
 ## Routing guide
 
 - Address validation and signing: read [ICAN rules](core-protocol.md#addresses-and-ican) and [Core signature format](core-protocol.md#signatures-and-address-derivation), then select the relevant client or library below.
-- Wallet recovery, mnemonic imports, and HD account selection: read [coin type 654 and Core derivation paths](core-protocol.md#hd-wallet-derivation), then inspect the relevant wallet or signer implementation.
+- Wallet recovery, mnemonic imports, and HD account selection: read [mnemonic dictionaries](mnemonic-dictionaries.md) and [coin type 654 and Core derivation paths](core-protocol.md#hd-wallet-derivation), then inspect the relevant wallet or signer implementation.
 - Hashes, ABI selectors, event IDs, and contract addresses: read [Core hashing](core-protocol.md#hashing).
 - Message signing and typed data: read [Core digest construction](core-protocol.md#message-and-typed-data-signing) before adapting wallet or contract helpers.
 - Transaction construction, signing, and transport: read [Core transaction encoding and replay protection](core-protocol.md#transactions).
