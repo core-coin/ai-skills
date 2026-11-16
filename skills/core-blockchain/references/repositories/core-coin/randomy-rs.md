@@ -36,5 +36,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core integration, use the [Cryptore proof-of-work baseline](../../core-protocol.md#consensus) when checking algorithm and input compatibility; do not infer compatibility from the binding's name.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/README.md), [`src/lib.rs`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/src/lib.rs), [`.gitmodules`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/.gitmodules), [`Cargo.toml`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/Cargo.toml), [`.github/workflows/audit.yml`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/.github/workflows/audit.yml), [`.github/workflows/ci.yml`](https://github.com/core-coin/randomy-rs/blob/ea1e46ea5885b4a34695da0afd1cccd7db783c2a/.github/workflows/ci.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

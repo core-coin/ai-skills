@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core wallet-address validation, consult [ICAN rules and go-core exceptions](../../core-protocol.md#addresses-and-ican); do not assume every node-level exception belongs in wallet input validation.
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/flutter_wallet_validator/blob/6bb14dbf680e076f125c3171ce3dc546430afdf7/README.md), [`lib/src/validator.dart`](https://github.com/bchainhub/flutter_wallet_validator/blob/6bb14dbf680e076f125c3171ce3dc546430afdf7/lib/src/validator.dart), [`pubspec.yaml`](https://github.com/bchainhub/flutter_wallet_validator/blob/6bb14dbf680e076f125c3171ce3dc546430afdf7/pubspec.yaml), [`.github/workflows/publish.yml`](https://github.com/bchainhub/flutter_wallet_validator/blob/6bb14dbf680e076f125c3171ce3dc546430afdf7/.github/workflows/publish.yml), [`.github/workflows/test.yml`](https://github.com/bchainhub/flutter_wallet_validator/blob/6bb14dbf680e076f125c3171ce3dc546430afdf7/.github/workflows/test.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

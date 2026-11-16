@@ -31,5 +31,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For the maintained guidance on Core/Ethereum differences, consult [Core protocol](../../core-protocol.md), including [hashing](../../core-protocol.md#hashing), [transaction encoding](../../core-protocol.md#transactions), and [consensus](../../core-protocol.md#consensus), alongside this comparison and verify each claim against its source revision.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/core-diff/blob/d6c22c36697e3cc704387da0bad89ac9038c1f89/README.md).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

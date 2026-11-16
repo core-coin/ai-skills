@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When changing work construction or nonce verification, compare with the [Core seal-hash and proof-of-work rules](../../core-protocol.md#consensus), then verify the miner's Stratum representation separately.
+
 Primary evidence: [`README.md`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/README.md), [`coreminer/main.cpp`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/coreminer/main.cpp), [`.gitmodules`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/.gitmodules), [`CMakeLists.txt`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/CMakeLists.txt), [`Dockerfile`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/Dockerfile), [`.github/workflows/build.yml`](https://github.com/catchthatrabbit/coreminer/blob/959119a256bf9444cee4bd1c8f58d85a7d63374e/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

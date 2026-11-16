@@ -38,5 +38,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core integration, distinguish this package's raw cryptographic results from the [Core extended signature format](../../core-protocol.md#signatures-and-address-derivation).
+
 Primary evidence: [`README.md`](https://github.com/CorePass/flutter_ed448/blob/99861de215d513afb2a69da20b81d72539d2694a/README.md), [`js/main.dart`](https://github.com/CorePass/flutter_ed448/blob/99861de215d513afb2a69da20b81d72539d2694a/js/main.dart), [`pubspec.yaml`](https://github.com/CorePass/flutter_ed448/blob/99861de215d513afb2a69da20b81d72539d2694a/pubspec.yaml), [`.github/workflows/ci.yml`](https://github.com/CorePass/flutter_ed448/blob/99861de215d513afb2a69da20b81d72539d2694a/.github/workflows/ci.yml), [`.github/workflows/publish.yml`](https://github.com/CorePass/flutter_ed448/blob/99861de215d513afb2a69da20b81d72539d2694a/.github/workflows/publish.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

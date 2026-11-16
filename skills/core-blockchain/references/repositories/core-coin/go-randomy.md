@@ -36,5 +36,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For client integration, compare the binding's inputs and results with [Cryptore seal verification](../../core-protocol.md#consensus) and check the version selected by the target client's manifest.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/go-randomy/blob/d2b7cb34e0821c620b9d5b76ff01b45888ed0ef7/README.md), [`vm.go`](https://github.com/core-coin/go-randomy/blob/d2b7cb34e0821c620b9d5b76ff01b45888ed0ef7/vm.go), [`go.mod`](https://github.com/core-coin/go-randomy/blob/d2b7cb34e0821c620b9d5b76ff01b45888ed0ef7/go.mod), [`.github/workflows/build.yml`](https://github.com/core-coin/go-randomy/blob/d2b7cb34e0821c620b9d5b76ff01b45888ed0ef7/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

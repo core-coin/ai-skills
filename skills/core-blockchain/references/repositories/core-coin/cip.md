@@ -24,4 +24,6 @@ The source tree contains `cip/core/`, `cip/networking/`, `cip/interface/`, `cip/
 
 ## Relationships
 
+For the implemented address, hashing, signature, transaction, CVM, precompile, and consensus baseline, consult [Core protocol](../../core-protocol.md) alongside the relevant proposal.
+
 Use CIPs with [`go-core`](go-core.md) for client behavior, [`cvm`](cvm.md) for execution, and contract or wallet references for interface implementations. A proposal is evidence for a standard; confirm the implementation and activation state in current source before changing protocol behavior.

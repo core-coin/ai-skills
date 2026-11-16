@@ -35,5 +35,9 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For mnemonic import, HD wallet creation, or account discovery, read [Core HD derivation](../../core-protocol.md#hd-wallet-derivation). Check the SDK's derivation scheme and full path against the originating wallet; do not assume matching coin types or API names guarantee the same keys.
+
+For wallet signing, address recovery, and contract calls, consult [Core protocol](../../core-protocol.md), especially [message and typed-data digests](../../core-protocol.md#message-and-typed-data-signing), [transaction encoding](../../core-protocol.md#transactions), and [ABI hashing](../../core-protocol.md#hashing). Verify SDK conventions against the client baseline.
+
 Primary evidence: [`README.md`](https://github.com/CorePass/corebc.js/blob/caedc524ad4a77d35474dbeebd66fe6332ba667c/README.md), [`src.ts/index.ts`](https://github.com/CorePass/corebc.js/blob/caedc524ad4a77d35474dbeebd66fe6332ba667c/src.ts/index.ts), [`package.json`](https://github.com/CorePass/corebc.js/blob/caedc524ad4a77d35474dbeebd66fe6332ba667c/package.json), [`.github/workflows/nodejs.yml`](https://github.com/CorePass/corebc.js/blob/caedc524ad4a77d35474dbeebd66fe6332ba667c/.github/workflows/nodejs.yml), [`.github/workflows/publish-npm.yml`](https://github.com/CorePass/corebc.js/blob/caedc524ad4a77d35474dbeebd66fe6332ba667c/.github/workflows/publish-npm.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

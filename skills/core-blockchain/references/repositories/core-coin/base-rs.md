@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When changing Core address or ABI types, compare [address widths](../../core-protocol.md#addresses-and-ican) and [hashing rules](../../core-protocol.md#hashing) with the client baseline.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/base-rs/blob/c4db05f2e108b426d543e245c8ac829e500f6043/README.md), [`crates/core/src/lib.rs`](https://github.com/core-coin/base-rs/blob/c4db05f2e108b426d543e245c8ac829e500f6043/crates/core/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/base-rs/blob/c4db05f2e108b426d543e245c8ac829e500f6043/Cargo.toml), [`.github/workflows/ci.yml`](https://github.com/core-coin/base-rs/blob/c4db05f2e108b426d543e245c8ac829e500f6043/.github/workflows/ci.yml), [`.github/workflows/deps.yml`](https://github.com/core-coin/base-rs/blob/c4db05f2e108b426d543e245c8ac829e500f6043/.github/workflows/deps.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

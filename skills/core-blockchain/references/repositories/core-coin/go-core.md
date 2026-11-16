@@ -13,6 +13,8 @@
 Go client implementation used as the compatibility baseline for Core network behavior.
 The [`README.md`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/README.md) is the starting evidence for this role. Use this repository for tasks involving its documented interface; inspect the current source before choosing it over similarly named projects.
 
+Read the relevant sections of [Core protocol](../../core-protocol.md) before work on addresses, hashing, signatures, transactions, CVM, precompiles, or consensus. It records the client's encoding, validation exceptions, execution behavior, and proof-of-work rules at the inspected revision.
+
 ## Architecture and source entry points
 
 Inspected source entry point: [`cmd/cvm/main.go`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/cmd/cvm/main.go).
@@ -39,6 +41,8 @@ Related references by task (not verified direct dependencies): [`core-coin/cvm`]
 Similar naming or a sibling checkout does not establish a direct dependency; verify imports and manifest versions before linking projects.
 
 ## Compatibility and evidence
+
+For wallet account discovery and path parsing, read [Core HD derivation](../../core-protocol.md#hd-wallet-derivation), which distinguishes the default root and address paths from actual wallet-backend support.
 
 Primary evidence: [`README.md`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/README.md), [`cmd/cvm/main.go`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/cmd/cvm/main.go), [`Dockerfile`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/Dockerfile), [`Makefile`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/Makefile), [`go.mod`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/go.mod), [`.github/workflows/build.yml`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/.github/workflows/build.yml), [`.github/workflows/docker.yml`](https://github.com/core-coin/go-core/blob/a091fe2d31ea1d3926db64da7621f26ed01c92a9/.github/workflows/docker.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

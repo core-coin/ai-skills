@@ -33,5 +33,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Before changing key, address, or signing interoperability, read the [Core signature and address-derivation format](../../core-protocol.md#signatures-and-address-derivation). For signed transactions, use the [wire format, signing hash, and network-ID rules](../../core-protocol.md#transactions).
+
 Primary evidence: [`README.md`](https://github.com/core-coin/Xcb.Net/blob/d9a36122c76ea55ba66f7cefcac231a2878e2ab1/README.md), [`Xcb.Net/RLP/RLP.cs`](https://github.com/core-coin/Xcb.Net/blob/d9a36122c76ea55ba66f7cefcac231a2878e2ab1/Xcb.Net/RLP/RLP.cs), [`.github/workflows/package.yml`](https://github.com/core-coin/Xcb.Net/blob/d9a36122c76ea55ba66f7cefcac231a2878e2ab1/.github/workflows/package.yml), [`.github/workflows/test.yml`](https://github.com/core-coin/Xcb.Net/blob/d9a36122c76ea55ba66f7cefcac231a2878e2ab1/.github/workflows/test.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

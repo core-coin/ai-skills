@@ -34,5 +34,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core account-address semantics, consult [ICAN rules and go-core exceptions](../../core-protocol.md#addresses-and-ican); verify this library's behavior separately before extending those exceptions to its API.
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/ican.js/blob/4cfc33f9518837be5a69aa0c877a6cedb591bbd4/README.md), [`ican.js`](https://github.com/bchainhub/ican.js/blob/4cfc33f9518837be5a69aa0c877a6cedb591bbd4/ican.js), [`package.json`](https://github.com/bchainhub/ican.js/blob/4cfc33f9518837be5a69aa0c877a6cedb591bbd4/package.json), [`.github/workflows/publish.yml`](https://github.com/bchainhub/ican.js/blob/4cfc33f9518837be5a69aa0c877a6cedb591bbd4/.github/workflows/publish.yml), [`.github/workflows/tests.yml`](https://github.com/bchainhub/ican.js/blob/4cfc33f9518837be5a69aa0c877a6cedb591bbd4/.github/workflows/tests.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

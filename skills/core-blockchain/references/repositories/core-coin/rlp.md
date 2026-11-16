@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When encoding Core transactions, follow the [client's field order and signing-hash order](../../core-protocol.md#transactions); an RLP library alone does not define the transaction schema.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/rlp/blob/9e108a2367bfc52d3149e2b624a0c62d7d23a0bd/README.md), [`crates/rlp/src/lib.rs`](https://github.com/core-coin/rlp/blob/9e108a2367bfc52d3149e2b624a0c62d7d23a0bd/crates/rlp/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/rlp/blob/9e108a2367bfc52d3149e2b624a0c62d7d23a0bd/Cargo.toml), [`.github/workflows/ci.yml`](https://github.com/core-coin/rlp/blob/9e108a2367bfc52d3149e2b624a0c62d7d23a0bd/.github/workflows/ci.yml), [`.github/workflows/deps.yml`](https://github.com/core-coin/rlp/blob/9e108a2367bfc52d3149e2b624a0c62d7d23a0bd/.github/workflows/deps.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

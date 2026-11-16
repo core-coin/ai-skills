@@ -2,7 +2,9 @@
 
 ## Planning context
 
-The following are project-owner goals supplied with this skill request. They are planning context, not verified claims about every repository. The intended client modernization should preserve the existing Core network and current proof-of-work behavior. The existing `core-coin/go-core` client is the behavioral reference. The owner describes Core as derived from pre-Merge Ethereum with modifications; inspect actual sources before documenting differences.
+The following are project-owner goals supplied with this skill request. They are planning context, not verified claims about every repository. The intended client modernization should preserve the existing Core network and current proof-of-work behavior. The existing `core-coin/go-core` client is the behavioral reference.
+
+See [Core protocol](core-protocol.md) for the Ethereum fork origin and implemented rules used when evaluating compatibility, especially [hashing](core-protocol.md#hashing), [transactions](core-protocol.md#transactions), and [consensus](core-protocol.md#consensus). The current consensus section separates reward and difficulty behavior from the future goals below.
 
 A future client should be able to run alongside `go-core`. Compare historical block validation, block hashes, state roots, receipts, energy accounting, rewards, fork choice, reorganizations, networking, and RPC behavior. Compare the same block hash, not just the latest height. Concurrent clients need separate data directories and ports.
 

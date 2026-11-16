@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Use [Core protocol](../../core-protocol.md) when selecting expected results for client compatibility tests, including [hashing](../../core-protocol.md#hashing), [transaction encoding and replay protection](../../core-protocol.md#transactions), [consensus](../../core-protocol.md#consensus), address validation, CVM instructions, and precompile calls.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/hive/blob/7abf3138375dda9162dce43d50a9fb5ce06e4188/README.md), [`cmd/hiveview/main.go`](https://github.com/core-coin/hive/blob/7abf3138375dda9162dce43d50a9fb5ce06e4188/cmd/hiveview/main.go), [`go.mod`](https://github.com/core-coin/hive/blob/7abf3138375dda9162dce43d50a9fb5ce06e4188/go.mod).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

@@ -31,5 +31,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Use [Core protocol](../../core-protocol.md) when a rename affects addresses, signatures, or CVM behavior; a terminology mapping alone does not establish semantic compatibility.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/renaming-table/blob/b25eb3e92d400dc24e324e9d65af532d63c7295c/README.md), [`replace.go`](https://github.com/core-coin/renaming-table/blob/b25eb3e92d400dc24e324e9d65af532d63c7295c/replace.go).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

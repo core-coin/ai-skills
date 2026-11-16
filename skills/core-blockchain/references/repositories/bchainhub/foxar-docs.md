@@ -37,5 +37,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+When documenting Core execution, native calls, or signature recovery, link to the [Core protocol baseline](../../core-protocol.md) and verify it against the documented toolchain version.
+
 Primary evidence: [`README.md`](https://github.com/bchainhub/foxar-docs/blob/b4619e7dff80ae719cdb56273b9fa6358ae7c034/README.md), [`sidebars.ts`](https://github.com/bchainhub/foxar-docs/blob/b4619e7dff80ae719cdb56273b9fa6358ae7c034/sidebars.ts), [`package.json`](https://github.com/bchainhub/foxar-docs/blob/b4619e7dff80ae719cdb56273b9fa6358ae7c034/package.json), [`.github/workflows/markdownlint.yml`](https://github.com/bchainhub/foxar-docs/blob/b4619e7dff80ae719cdb56273b9fa6358ae7c034/.github/workflows/markdownlint.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

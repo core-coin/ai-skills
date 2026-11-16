@@ -33,5 +33,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For Core signing or verification integration, consult the [Core signature format](../../core-protocol.md#signatures-and-address-derivation) and confirm whether this crate returns raw or extended signatures.
+
 Primary evidence: [`src/lib.rs`](https://github.com/core-coin/ed448-rs/blob/dc58d0c73d1f216379e7dadcee5840cada092d83/src/lib.rs), [`Cargo.toml`](https://github.com/core-coin/ed448-rs/blob/dc58d0c73d1f216379e7dadcee5840cada092d83/Cargo.toml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

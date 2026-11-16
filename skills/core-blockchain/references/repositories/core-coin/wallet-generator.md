@@ -33,5 +33,9 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+For HD wallet generation or recovery integrations, read [Core HD derivation](../../core-protocol.md#hd-wallet-derivation). Keep path-based derivation separate from raw-key generation and confirm the generator's actual support before choosing a recovery flow.
+
+For account generation and address validation, use [ICAN rules](../../core-protocol.md#addresses-and-ican) and [public-key address derivation](../../core-protocol.md#signatures-and-address-derivation).
+
 Primary evidence: [`README.md`](https://github.com/core-coin/wallet-generator/blob/3353936feffba5f31bedbbe41364976c785e8f2b/README.md), [`main.go`](https://github.com/core-coin/wallet-generator/blob/3353936feffba5f31bedbbe41364976c785e8f2b/main.go), [`go.mod`](https://github.com/core-coin/wallet-generator/blob/3353936feffba5f31bedbbe41364976c785e8f2b/go.mod), [`.github/workflows/build.yml`](https://github.com/core-coin/wallet-generator/blob/3353936feffba5f31bedbbe41364976c785e8f2b/.github/workflows/build.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.

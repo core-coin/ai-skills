@@ -2,15 +2,22 @@
 
 Select the smallest set of references relevant to the task. These references capture inspected revisions; recheck current source before changing code.
 
-Coverage: **88 repository identities**: 85 inspected source trees, 2 user-supplied READMEs without source access, and 1 inaccessible repository. See [research status](research-status.md).
+Coverage: **88 reference cards covering 89 repository identities**: 86 inspected source trees, 2 user-supplied READMEs without source access, and 1 inaccessible repository. One CoreOZ card covers both the standard and upgradeable libraries. See [research status](research-status.md).
 
 ## Routing guide
 
-- Client consensus and compatibility: start with [`go-core`](repositories/core-coin/go-core.md), then [protocol and compatibility](protocol-and-compatibility.md).
-- Dart transaction signing or wallet integration: inspect [`core_web3dart`](repositories/CorePass/core_web3dart.md) and [`flutter_ed448`](repositories/CorePass/flutter_ed448.md).
+- Address validation and signing: read [ICAN rules](core-protocol.md#addresses-and-ican) and [Core signature format](core-protocol.md#signatures-and-address-derivation), then select the relevant client or library below.
+- Wallet recovery, mnemonic imports, and HD account selection: read [coin type 654 and Core derivation paths](core-protocol.md#hd-wallet-derivation), then inspect the relevant wallet or signer implementation.
+- Hashes, ABI selectors, event IDs, and contract addresses: read [Core hashing](core-protocol.md#hashing).
+- Message signing and typed data: read [Core digest construction](core-protocol.md#message-and-typed-data-signing) before adapting wallet or contract helpers.
+- Transaction construction, signing, and transport: read [Core transaction encoding and replay protection](core-protocol.md#transactions).
+- CVM bytecode and native calls: read [execution rules](core-protocol.md#cvm-execution), [precompile addresses](core-protocol.md#precompile-addresses), and [ecrecover](core-protocol.md#ecrecover).
+- Client consensus and compatibility: start with [`go-core`](repositories/core-coin/go-core.md), [implemented consensus rules](core-protocol.md#consensus), and [protocol and compatibility](protocol-and-compatibility.md).
+- Dart transaction signing or wallet integration: inspect [`core_web3dart`](repositories/CorePass/core_web3dart.md) and [`flutter_ed448`](repositories/CorePass/flutter_ed448.md) with the [Core signature format](core-protocol.md#signatures-and-address-derivation) and [transaction rules](core-protocol.md#transactions).
 - Air-gapped animated QR transport: inspect the [`flutter_barcodetx`](repositories/DataLayerHost/flutter_barcodetx.md) encoder and the desktop [`ScanBarcode`](repositories/DataLayerHost/ScanBarcode.md) receiver. Check deeplink handoff and update behavior before assuming the receiving device stays offline.
-- Mining: inspect [`RandomY`](repositories/core-coin/RandomY.md), [`coreminer`](repositories/catchthatrabbit/coreminer.md), and [`pool`](repositories/catchthatrabbit/pool.md) as the task requires.
-- Contracts: start with [`ylem`](repositories/core-coin/ylem.md), [`cvm`](repositories/core-coin/cvm.md), and the relevant ABI or framework reference.
+- Mining: read [proof-of-work and reward rules](core-protocol.md#consensus), then inspect [`RandomY`](repositories/core-coin/RandomY.md), [`coreminer`](repositories/catchthatrabbit/coreminer.md), and [`pool`](repositories/catchthatrabbit/pool.md) as the task requires.
+- Contracts: read the [CVM execution baseline](core-protocol.md#cvm-execution), then [Ylem](repositories/core-coin/ylem.md) for compiler, ABI, and storage behavior. For reusable tokens, signatures, and proxies, use the single [CoreOZ card](repositories/bchainhub/CoreOpenZeppelin.md) covering both standard and upgradeable libraries. For the separate Rust VM, inspect [`cvm`](repositories/core-coin/cvm.md) and compare its behavior with the `go-core` baseline.
+- Foxar development workflows: use the [Foxar card](repositories/bchainhub/foxar.md#contract-project-workflow) for project builds, tests, network selection, script simulation, deployment, and signing; consult [`spark-std`](repositories/bchainhub/spark-std.md) for test-library changes.
 - Standards and proposals: use [`cip`](repositories/core-coin/cip.md) and its compact `llms.txt` index, then inspect the individual proposal and current implementation.
 - Fee-splitting contracts: inspect [`ylem-splitting`](repositories/core-laboratories/ylem-splitting.md). The user-supplied [Contract Deployer README](contract-deployer.md) describes a local deployment GUI without a repository identity.
 
@@ -68,7 +75,7 @@ Coverage: **88 repository identities**: 85 inspected source trees, 2 user-suppli
 | [core-coin/coreabi](repositories/core-coin/coreabi.md) | Rust | Source inspected |
 | [core-coin/ylem-bins](repositories/core-coin/ylem-bins.md) | Not verified | Source inspected |
 | [bchainhub/foxar](repositories/bchainhub/foxar.md) | Rust | Source inspected |
-| [bchainhub/CoreOpenZeppelin](repositories/bchainhub/CoreOpenZeppelin.md) | JavaScript / TypeScript | Source inspected |
+| [CoreOZ: bchainhub/openzeppelin-contracts and openzeppelin-contracts-upgradeable](repositories/bchainhub/CoreOpenZeppelin.md) | Ylem / Foxar | Both source trees inspected |
 | [bchainhub/spark-std](repositories/bchainhub/spark-std.md) | JavaScript / TypeScript | Source inspected |
 | [bchainhub/ds-test](repositories/bchainhub/ds-test.md) | JavaScript / TypeScript | Source inspected |
 | [bchainhub/foxar-docs](repositories/bchainhub/foxar-docs.md) | JavaScript / TypeScript | Source inspected |

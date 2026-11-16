@@ -35,5 +35,7 @@ Similar naming or a sibling checkout does not establish a direct dependency; ver
 
 ## Compatibility and evidence
 
+Before emitting bytecode for Core, check the [CVM instruction and hashing baseline](../../core-protocol.md#cvm-execution), including Core-specific opcodes, against this assembler's supported target.
+
 Primary evidence: [`README.md`](https://github.com/core-coin/geas/blob/7e40470f64bd2f0ef2c3159b02ac4ecfb4a49646/README.md), [`asm/ast.go`](https://github.com/core-coin/geas/blob/7e40470f64bd2f0ef2c3159b02ac4ecfb4a49646/asm/ast.go), [`go.mod`](https://github.com/core-coin/geas/blob/7e40470f64bd2f0ef2c3159b02ac4ecfb4a49646/go.mod), [`.github/workflows/go.yml`](https://github.com/core-coin/geas/blob/7e40470f64bd2f0ef2c3159b02ac4ecfb4a49646/.github/workflows/go.yml).
 The source tree and listed text files were inspected at the commit above. Dependencies were **not installed**; build, tests, and runtime were **not executed**. Confirm protocol, encoding, cryptographic, and version behavior in current code before implementation. README instructions may differ from newer manifests or CI.
