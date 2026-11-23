@@ -2,6 +2,12 @@
 
 Use the exact wordlist and word order supported by the target wallet when creating, validating, or recovering a mnemonic. A language name alone does not establish compatibility. Check the wallet's implementation and its treatment of Unicode normalization, word separators, checksum validation, and passphrases. Never infer a recovery phrase or private key from a wordlist.
 
+## Mnemonic length and passphrase
+
+Use 24 mnemonic words by default when the wallet supports them. The word count can vary: 12 words are another common choice, and a wallet may support other counts such as 16. Verify the target wallet's format and checksum rules before using a nonstandard count; do not assume a 16-word phrase is accepted by a BIP-39 implementation.
+
+In BIP-39 mnemonic-to-seed derivation, the salt is `"mnemonic" + passphrase`. With an empty passphrase, the salt is `"mnemonic"`. The optional value often called the “25th word” is a separate passphrase, not another mnemonic word. CorePass uses a PIN in that role, so its salt is `"mnemonic" + PIN`. Other applications may use a password or another value for hidden wallets or added security. One UI option is an emoji as the “25th word.” Preserve the exact passphrase and the wallet's Unicode normalization behavior when restoring a wallet; different values derive different wallets. A 12-word or other supported mnemonic can likewise be used with a passphrase.
+
 The following sources are available for language-specific dictionary work. The [Bitcoin BIP-39 wordlist index](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) documents the canonical lists and language-specific considerations. Lists from other repositories are separate dictionaries; their presence here does not mean every BIP-39 wallet accepts them.
 
 | Language | Dictionary source | Notes |
